@@ -43,3 +43,15 @@ Start time: 4:34
 Finish time: 8:11
 
 Actual time needed to complete: 3hr 35minutes
+
+## Lab 04
+
+Number and name of feature: Add a horn filter
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 3:41
+
+Finish time: 5:11
+
+Actual time needed to complete: 1hr 12min

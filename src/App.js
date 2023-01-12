@@ -5,6 +5,7 @@ import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
 import SelectedBeast from './components/SelectedBeast/SelectedBeast';
 import data from './data/data.json';
+
 // Class component
 
 class App extends React.Component{
@@ -27,7 +28,6 @@ class App extends React.Component{
   }
 
   handleCloseModal = () => {
-    console.log('here');
     this.setState({
       showModal: false,
     })
@@ -39,7 +39,7 @@ class App extends React.Component{
         <Header />
         <Main handleOpenModal={this.handleOpenModal} show={this.state.showModal} data={this.state.data}/>
             <SelectedBeast
-            onHide={this.handleCloseModal}
+            handleCloseModal={this.handleCloseModal}
             show={this.state.showModal}
             selected={this.state.selected}
             />
