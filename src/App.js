@@ -37,7 +37,7 @@ class App extends React.Component{
     return (
       <> 
         <Header />
-        <Main handleOpenModal={this.handleOpenModal} show={this.state.showModal} data={this.state.data}/>
+        <Main handleOpenModal={this.handleOpenModal} show={this.state.showModal}/>
             <SelectedBeast
             handleCloseModal={this.handleCloseModal}
             show={this.state.showModal}

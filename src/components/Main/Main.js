@@ -9,7 +9,6 @@ class Main extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      sortedData: data,
       beastData: data,
     }
   }
@@ -18,16 +17,15 @@ class Main extends React.Component{
     let numOfHorns = parseInt(event.target.value);
     let newData = this.state.beastData;
     if(numOfHorns){
-      newData = this.state.beastData.filter(num => num.horns === numOfHorns)
+      newData = data.filter(num => num.horns === numOfHorns)
     }
     this.setState({
-      sortedData: newData,
+      beastData: newData,
     })
   }
   render(){
     return(
       <>
-        <main>
         <Form>
             <FormGroup>
               <FormSelect name ='selected' onChange={this.handleSelect}>
@@ -39,7 +37,8 @@ class Main extends React.Component{
               </FormSelect>
             </FormGroup>
           </Form>
-          {this.state.sortedData.map((beast) => {
+        <main>
+          {this.state.beastData.map((beast) => {
             return(
             <HornedBeast 
             title={beast.title} 
